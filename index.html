@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Museo della Scienza e Tecnologia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://static.sky.it/editorialimages/e3a3dc4595ec9ef7f091b0ce72d7f7816a1428c9/skytg24/it/scienze/2020/10/21/milano-museo-scienza-laboratori-interattivi-visite-guidate/sala-del-cenacolo-museo-nazionale-scienza-tecnologia.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+
+    .dropdown {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .dropbtn {
+      background-color: #eec08b;
+      color: #000;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 250px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+      border-radius: 6px;
+      overflow: hidden;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 60px;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      background-color: #333;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    .contenido {
+      background-color: rgba(0, 0, 0, 0);
+      margin: 100px auto 40px;
+      padding: 30px;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1, h2, h3 {
+      color: #eec08b;
+      margin-bottom: 10px;
+    }
+
+    p, li, td, th {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      color: #fff;
+    }
+
+    th {
+      background-color: rgba(0, 102, 204, 0.7);
+    }
+
+    .galeria img {
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .contenido {
+        padding: 20px;
+      }
+
+      .galeria {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dropbtn {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+<nav class="dropdown">
+  <button onclick="toggleMenu()" class="dropbtn">Menú de Secciones ▾</button>
+  <div id="menu" class="dropdown-content">
+    <a href="#bienvenida">Bienvenida</a>
+    <a href="#secciones">Secciones del museo</a>
+    <a href="#hipervinculos">Multimedia e Hipervínculos</a>
+    <a href="#tabla">Tabla Informativa</a>
+    <a href="#galeria">Galería de Imágenes</a>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      const menu = document.getElementById("menu");
+      if (menu && menu.style.display === "block") {
+        menu.style.display = "none";
+      }
+    }
+  };
+</script>
+
+
+<div class="contenido" id="bienvenida">
+  <header>
+    <h1>Museo Nazionale della Scienza e della Tecnologia</h1>
+    <h2>Leonardo da Vinci - Milán, Italia</h2>
+  </header>
+
+  <p><strong>Tema:</strong> Esta página está dedicada al museo de ciencia más grande de Italia, destacando sus innovaciones, historia y exposiciones interactivas.</p>
+  <p>¡Bienvenido! Aquí conocerás más sobre este fascinante lugar que une ciencia, tecnología e historia en un solo espacio.</p>
+
+  <section id="secciones">
+    <h2>Secciones del museo</h2>
+    <h3>Áreas principales:</h3>
+    <ol>
+      <li>Galería de Leonardo da Vinci</li>
+      <li>Transporte (trenes, barcos, aviones)</li>
+      <li>Espacio y Astronomía</li>
+      <li>Robótica e Inteligencia Artificial</li>
+      <li>Energía y Medio Ambiente</li>
+    </ol>
+
+    <h3>Servicios al visitante:</h3>
+    <ul>
+      <li>Restaurantes y cafeterías</li>
+      <li>Tiendas de souvenirs</li>
+      <li>Guías digitales</li>
+      <li>Actividades educativas</li>
+    </ul>
+  </section>
+
+  <section id="hipervinculos">
+    <h2>Hipervínculos y multimedia</h2>
+
+    <h3>Hipervínculo de texto:</h3>
+    <p>Visita el <a href="https://www.museoscienza.org" target="_blank">sitio oficial del museo</a>.</p>
+
+    <h3>Hipervínculo con imagen:</h3>
+    <a href="https://www.museoscienza.org" target="_blank">
+      <img src="https://audiala.com/assets/images/Q947082/12_milano-san-vittore-museo-leonardo-da-vinci.jpg" alt="Museo exterior" width="300">
+    </a>
+
+    <h3>Hipervínculo con GIF:</h3>
+    <a href="galeria.html" target="_blank">
+      <img src="https://www.museoscienza.org/besrv/sites/default/files/inline-images/dall-eta-romana-al-novecento.gif" alt="Ir a galería" width="200">
+    </a>
+    
+    <h3>Video sobre el sitio:</h3>
+    <p>
+      Mira el video en YouTube:  
+      <a href="https://www.youtube.com/watch?v=I58PVmn7FeA" target="_blank">https://www.youtube.com/watch?v=I58PVmn7FeA</a>
+    </p>
+    
+
+  <section id="tabla">
+    <h2>Tabla – Secciones del museo</h2>
+    <table>
+      <tr>
+        <th>Sección</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>Leonardo da Vinci</td>
+        <td>Modelos y máquinas inspiradas en sus manuscritos.</td>
+      </tr>
+      <tr>
+        <td>Transporte</td>
+        <td>Trenes, barcos, aviones y automóviles históricos.</td>
+      </tr>
+      <tr>
+        <td>Espacio</td>
+        <td>Tecnología espacial, satélites y misiones.</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería de imágenes</h2>
+    <div class="galeria" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+      <img src="https://zero-media.s3.amazonaws.com/uploads/2015/05/museo-della-scienza-milano-zero.jpg" width="300" alt="Interior 1">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZKIFMvoLHv4G_0AEygElhRqC0pC0VZ8QA2Q&s" width="300" alt="Exterior">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhW28qk5kxIJ8ewYYduyVN93GFCV0wp246Kg&s" width="300" alt="Interior 2">
+    </div>
+  </section>
+</div>
+
+<section id="botones">
+  <h2>Botones interactivos</h2>
+  <p>Pulsa un botón para interactuar con el contenido:</p>
+  
+  <button onclick="alert('¿Sabías que el museo alberga el submarino Toti, el primero construido en Italia después de la Segunda Guerra Mundial?')" 
+        style="padding:10px 20px; margin:10px; background-color:#eec08b; 
+               color:#000; border:none; border-radius:6px; font-weight:bold;">
+  Mostrar Dato Curioso
+</button>
+
+  
+  <button onclick="window.open('https://maps.app.goo.gl/w3hz9pUBdohrt3bc8')" 
+          style="padding:10px 20px; margin:10px; background-color:#eec08b; 
+                 color:#000; border:none; border-radius:6px; font-weight:bold;">
+    Ver en Google Maps
+  </button>
+</section>
+
+<section id="marco">
+  <iframe src="frame.html" width="100%" height="200" style="border: 2px solid #eec08b; border-radius: 8px;"></iframe>
+</section>
+
+<section id="conclusion">
+  <h2>Conclusión personal</h2>
+  <p>
+    Realizar esta página web sobre el Museo Nazionale della Scienza e della Tecnologia Leonardo da Vinci me permitió conocer más sobre sus áreas y exposiciones. Aprendí a utilizar etiquetas HTML como tablas, listas, anclajes, marcos e hipervínculos. También mejoré mis habilidades en diseño responsivo y estructura visual. Me gustó combinar el contenido histórico con herramientas tecnológicas.
+  </p>
+</section>
+
+<footer style="background-color: rgba(0, 0, 0, 0.9); color: #eec08b; padding: 20px; text-align: center; font-size: 16px;">
+  <p><strong>Créditos del sitio web:</strong></p>
+  <p>Página realizada como proyecto  sobre el <em>Museo Nazionale della Scienza e della Tecnologia Leonardo da Vinci</em>, ubicado en Milán, Italia.</p>
+  
+  <p><strong>Fuentes de información:</strong></p>
+  <ul style="list-style-type: square; padding-left: 20px; color: #fff;">
+    <li><a href="https://www.museoscienza.org/" target="_blank" style="color: #ffd700;">Sitio oficial del museo</a></li>
+    <li><a href="https://es.wikipedia.org/wiki/Museo_Nazionale_della_Scienza_e_della_Tecnologia_Leonardo_da_Vinci" target="_blank" style="color: #ffd700;">Wikipedia – Museo della Scienza</a></li>
+    <li><a href="https://www.tripadvisor.com.mx/Attraction_Review-g187849-d243409-Reviews-Museo_Nazionale_Scienza_e_Tecnologia_Leonardo_da_Vinci-Milan_Lombardy.html" target="_blank" style="color: #ffd700;">TripAdvisor – Opiniones del museo</a></li>
+    <li><a href="https://www.youtube.com/watch?v=I58PVmn7FeA" target="_blank" style="color: #ffd700;">Video informativo en YouTube</a></li>
+  </ul>
+
+  <p style="margin-top: 10px;">Hecho por: <strong>Jesus Armando Ramirez Chaidez</strong> – Grupo 4B – Programación</p>
+</footer>
+
+
+</body>
+</html>
